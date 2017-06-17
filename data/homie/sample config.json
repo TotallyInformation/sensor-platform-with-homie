@@ -1,0 +1,20 @@
+{
+  "name": "<a useful name>",
+  "device_id": "<a unique id>",
+  "wifi": {
+    "ssid": "<a wifi name>",
+    "password": "<a wifi password>"
+  },
+  "mqtt": {
+    "host": "<mqtt broker ip>",
+    "port": 1883,
+    "base_topic": "homie/"
+  },
+  "ota": {
+    "enabled": true
+  },
+  "settings": {
+	"SENSOR_INTERVAL": 30,
+	"SENSORS": "dht,BH1750"
+  }
+}
