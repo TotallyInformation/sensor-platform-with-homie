@@ -15,8 +15,11 @@
 
   TO DO:
   - Add PIR
+  - Add pressure
+  - Add sound
   - Add NeoPixel code
   - Add optional for sensors, change custom settings to include pin numbers, etc.
+  - Inputs: change sensor interval
 */
 
  // --- Libraries to include ---- //
@@ -28,13 +31,14 @@
 #include <Wire.h>  // I2C, DH1750 Light sensor
 #include <BH1750FVI.h>
 
+// --- UPDATE FIRMWARE NAME/VERSION --- //
+#define FWNAME "sensors"
+#define FWVERSION "0.2.1"
+// ------------------------------------------------------------ //
+
 // Homie custom variables 
 HomieSetting<long> intervalSetting("SENSOR_INTERVAL", "The interval between sensor readings in seconds");
 HomieSetting<const char*> sensorList("SENSORS", "The types of sensors on this instance");
-
-
-#define FWNAME "sensors"
-#define FWVERSION "0.2.1"
 
 // DHT22 Temperature/Humidity
 #define DHTPIN D4             // pin DHT22 connected to - For Wemos DHT board, pin 4 (but that also is used for the onboard LED)
